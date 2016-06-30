@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>RailingWebINF</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>front</servlet-name>
+    <servlet-class>controller.FrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>front</servlet-name>
+    <url-pattern>/front.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>review</servlet-name>
+    <servlet-class>controller.ReviewController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>review</servlet-name>
+    <url-pattern>/review.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+     <servlet-name>reviewReply</servlet-name>
+     <servlet-class>controller.ReviewReplyController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>reviewReply</servlet-name>
+     <url-pattern>/reviewReply.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>member</servlet-name>
+  	<servlet-class>controller.MemberController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>member</servlet-name>
+  	<url-pattern>/member.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>mate</servlet-name>
+  	<servlet-class>controller.MateController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>mate</servlet-name>
+  	<url-pattern>/mate.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>mateReply</servlet-name>
+  	<servlet-class>controller.MateReplyController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>mateReply</servlet-name>
+  	<url-pattern>/mateReply.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>schedule</servlet-name>
+  	<servlet-class>controller.ScheduleController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>schedule</servlet-name>
+  	<url-pattern>/schedule.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+     <servlet-name>valid</servlet-name>
+     <servlet-class>member.model.ValidationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>valid</servlet-name>
+     <url-pattern>/valid.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+     <servlet-name>image</servlet-name>
+     <servlet-class>member.model.ImageUploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>image</servlet-name>
+     <url-pattern>/image.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+     <servlet-name>train</servlet-name>
+     <servlet-class>schedule.model.TrainServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>train</servlet-name>
+     <url-pattern>/train.action</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
