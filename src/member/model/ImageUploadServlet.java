@@ -1,7 +1,5 @@
 package member.model;
 
-import java.awt.AlphaComposite;
-import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.awt.image.PixelGrabber;
@@ -28,6 +26,10 @@ import member.model.MemberDao;
 import member.model.MemberDto;
 
 public class ImageUploadServlet extends HttpServlet {
+	/**
+	 * by 수항
+	 * 프로필 이미지, 프로필 배경 이미지 업로드 클래스
+	 */
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
