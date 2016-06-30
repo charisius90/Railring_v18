@@ -504,22 +504,22 @@ var poly = new daum.maps.Polyline({
     strokeStyle: 'dash' // 선의 스타일입니다
 });
 
-//등록 관련 변수
+//등록 관련 변수 by 수항
 var marker_count = 0,		// 등록된 마커 포인터
 	marker_arr = [],		// 등록된 마커를 저장할 배열
 	marker_temp = null,		// 등록된 마커를 스왑 할 템프
 	marker_origImg = null;	// 기본 이미지 저장 변수
 	
-//marker 2차원 배열 선언
+//marker 2차원 배열 선언 by 수항
 var	marker_tot = new Array();
 	marker_tot[0] = new Array();	// 모든 마커
 	marker_tot[1] = new Array();	// 모든 마커에 따른 플래그
 	marker_tot[2] = new Array();	// 모든 마커의 한글명
 
-//열차 시간표 저장 배열
+//열차 시간표 저장 배열 by 수항
 var train_arr = []; // marker_arr와 index를 같이한다.	
 
-//열차 시간표 저장 객체
+//열차 시간표 저장 객체 by 수항
 Train = function(title, date, time, dep, arr, flag){
 	this.title = title;	// marker의 타이틀(도시영문명)
 	this.date = date;	// 열차출발일자
@@ -546,11 +546,10 @@ Train.prototype = {
 	getFlag: function(){return this.flag;}
 }
 
-// 마커 등록 함수
+// 마커 등록 함수 by 수항
 function fnPlanMarkers(marker){
 	var $sortable = $("#sortable");
 	var param = '"' + marker.getTitle() + '"';
-	//var liContents = "<li class='ui-state-default' id='li_"+ marker.getTitle() +"'><span class='ui-icon ui-icon-arrowthick-2-n-s'></span>"+ marker.getTitle() +"<a style='display:inline-block;' href='javascript:fnDelMarker("+ param +")'><i class='icon-user icon-remove'></i></a></li>";
 	var liContents = "<li id='sort_li_"+ marker.getTitle() +"' class='ui-state-default' style='list-style:none;'>"
 						+ "<span id='sort_span' class='ui-icon ui-icon-arrowthick-2-n-s'></span>"
 						+ marker.getTitle() + "<input type='hidden' name='city_title' value='"+marker.getTitle()+"' />"
@@ -567,7 +566,7 @@ function fnPlanMarkers(marker){
 	$("#del_" + marker.getTitle()).tooltip();
 }
 
-//선택한 기차 시간표 저장
+//선택한 기차 시간표 저장 by 수항
 function fnSetTrain(){
 	if(true){
 		//기존값이 있으면 띄워줌
@@ -587,7 +586,7 @@ function fnSetTrain(){
 	$("#train_modal").modal("hide");
 }
 
-// 도시이름 -> 역 코드로 변경 함수
+// 도시이름 -> 역 코드로 변경 함수 by 수항
 function getPlaceId(title){
 	var result = "";
 	if(title == "서울"){
@@ -605,7 +604,7 @@ function getPlaceId(title){
 	return result;
 }
 
-// 기차 시간 조회 함수
+// 기차 시간 조회 함수 by 수항
 function fnSearchTrain(){
 	var title = $("#train_title").val();
 	var depart = $("#train_depart").val();
@@ -658,7 +657,7 @@ function fnSearchTrain(){
 	);
 }
 
-// 기차 시간표 모달로 띄워주는 함수
+// 기차 시간표 모달로 띄워주는 함수 by 수항
 function fnShowTrain(title){
 	$("#train_depart").val("");
 	$("#train_arrival").val("");
@@ -728,7 +727,7 @@ function fnShowTrain(title){
 	
 }
 	
-//일정 삭제한 마커의 이미지를 기본이미지로 변환
+//일정 삭제한 마커의 이미지를 기본이미지로 변환 by 수항
 function fnSetDefaultMarker(marker){
 	marker.setImage(marker_origImg);
 	var idx = 0;
@@ -741,7 +740,7 @@ function fnSetDefaultMarker(marker){
 	marker_tot[1][idx] = false;
 }
 
-//marker_arr 에서 타이틀로 검색, 해당 인덱스 반환
+//marker_arr 에서 타이틀로 검색, 해당 인덱스 반환 by 수항
 function fnGetIndex(title){
 	var index = 0;
 	for(var i=0; i<marker_arr.length; i++){
@@ -752,7 +751,7 @@ function fnGetIndex(title){
 	}
 }
 
-//순서 업데이트 함수
+//순서 업데이트 함수 by 수항
 function fnUpdateQueue(array){
 	var size = array.length;
 	var $sort_li = $("#sortable li");
@@ -785,7 +784,7 @@ function fnUpdateQueue(array){
 	fnSetMarkerImage(array);
 }
 
-//제거 함수
+//제거 함수 by 수항
 function fnDelMarker(title){
 	var index = fnGetIndex(title);
 	
@@ -841,7 +840,7 @@ var last_infowindow2 = null,	// 마지막에 열었던 인포윈도우2
     			position: new daum.maps.LatLng(position.lat, position.lng)
     		});
     		
-       		// marker_tot : marker와 플래그를 이차원배열에 저장
+       		// marker_tot : marker와 플래그를 이차원배열에 저장 by 수항
        		marker_tot[0].push(marker);
        		marker_tot[1].push(false);
        		marker_tot[2].push(position.title_kor);
@@ -1175,6 +1174,7 @@ function displayMarker(locPosition, messageLoc) {
 	});
 }    
 
+// 사용자가 sortable li 순서 변환 시 관련 모든 배열 업데이트  by 수항
 $(function() {
 	$( "#sortable" ).sortable({
 		stop: function( event, ui ) {

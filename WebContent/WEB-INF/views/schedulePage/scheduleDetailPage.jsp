@@ -62,9 +62,6 @@
 	}	
 	
 	function loadDetail(){
-// 		if(sch_no != null && cityNo != null){
-// 			alert("로드함수: 스케쥴 "+sch_no+", 도시 "+cityNo);
-// 		}
 		   var params={
 				   "sch_no":sch_no,
 				   "city_no":cityNo
@@ -76,7 +73,7 @@
 				   data : params,
 				   success : function (data) {
 						data = $.parseJSON(data);
-						// 현재 등록된 마커 제거
+						// 현재 등록된 마커 제거 by 수항
 						for(var i=0; i<marker_arr.length; i++){
 							// 지울 마커 이미지를 기본이미지로 바꾸고, 해당 플래그 false로 변환
 							fnSetDefaultMarker(marker_arr[i]);
@@ -419,7 +416,8 @@ function fnSetMarkerImage(marker_arr){
 //check
 var last_infowindow2 = null,
 	last_infowindow3 = null;
-
+	
+// by 수항
 //********************** 160619 변수 추가분 끝 ***************************************
 
 $.getJSON("json/city.json",function (data){
@@ -479,15 +477,15 @@ $.getJSON("json/city.json",function (data){
 				position : new daum.maps.LatLng(location.lat, location.lng)
 			});
 			
-			// 마커 기본이미지 저장
+			// 마커 기본이미지 저장 by 수항
 			if(i == 0){
        			marker_origImg = marker.getImage();
        		}
 			
-			//마커를 배열에 담아둠
+			//마커를 배열에 담아둠 by 수항
 			marker_tot[0].push(marker);
 			marker_tot[1].push(false);
-			//뽑아올 길이를 알기위해서 각각 다른배열에 저장
+			//뽑아올 길이를 알기위해서 각각 다른배열에 저장 by 수항
 			markerLoc.push(marker);
 			//로그창으로 확인
 			console.log(marker_tot[0].length);
@@ -527,7 +525,7 @@ $.getJSON("json/city.json",function (data){
 				title : motel.title,
 				position : new daum.maps.LatLng(motel.lat, motel.lng)
 			});
-			//마커를 배열에 담아둠
+			//마커를 배열에 담아둠 by 수항
 			marker_tot[0].push(marker);
 			marker_tot[1].push(false);
 			//뽑아올 길이를 알기위해서 각각 다른배열에 저장
@@ -569,7 +567,7 @@ $.getJSON("json/city.json",function (data){
 				title : res.title,
 				position : new daum.maps.LatLng(res.lat, res.lng)
 			});
-			//마커를 배열에 담아둠
+			//마커를 배열에 담아둠 by 수항
 			marker_tot[0].push(marker);
 			marker_tot[1].push(false);
 			//뽑아올 길이를 알기위해서 각각 다른배열에 저장
@@ -778,7 +776,7 @@ function panTo(lat, lng) {
 	map.panTo(moveLatLon);
 }
 
-//jQueryUI sortable
+//jQueryUI sortable by 수항
 $(function() {
 	$("#sortable").sortable({
 		stop : function(event, ui) {
