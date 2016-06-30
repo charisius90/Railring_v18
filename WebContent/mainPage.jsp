@@ -26,7 +26,7 @@
 </head>
 <body>
 <jsp:include page="bannerNavBar.jsp"></jsp:include>
-<!-- git 테스트 -->
+<!-- git 테스트2 -->
 <div style="background:url('./images/bs_1.jpg') no-repeat; background-size:cover; height:500px; margin-top: 21px"></div>
 	<div class="wrap" style="padding-top:70px; padding-bottom:70px">
 		<div class="container" style="margin-top: 20px; width: 1200px">
