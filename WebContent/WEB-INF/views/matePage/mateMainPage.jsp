@@ -100,6 +100,7 @@ div.container{width:1200px}
 								<a href="mate.action?cmd=READ&mate_no=<%=mateDto.getMat_no()%>">
 									<%=mateDto.getMat_subject()%>
 									<%
+										  // 규채 : 글을 쓰면 1분동안 new아이콘 띄우기
 			                              SimpleDateFormat t = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 			                              Date resdate = t.parse(mateDto.getMat_date());
 			                              

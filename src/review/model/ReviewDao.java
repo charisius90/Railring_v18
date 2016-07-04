@@ -63,6 +63,7 @@ public class ReviewDao {
 		}
 	}
 
+	// 규채 : 게시글 조회수 증가
 	public ReviewDto getReview(int num, boolean isRead) {
 		System.out.println("이제 열 글 번호: " + num);
 		String sql = "select rev.*, mem.mem_name from  review rev, member mem where rev.mem_no = mem.mem_no and rev.rev_no =" + num;
@@ -233,6 +234,7 @@ public class ReviewDao {
 		return vList;
 	}
 	
+	// 규채 : 마이페이지에서 게시판에 자신이 쓴 글 가져오기
 	public ArrayList getReview(String mem_no){
 		String sql = "select * from review where mem_no = ? ";
 		

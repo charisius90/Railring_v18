@@ -335,6 +335,7 @@ div.container{width:1200px}
 					<hr/>
 					내 리뷰 목록
 					<%
+						// 규채 : 각 게시판(메이트, 리뷰)에서 작성한 글들을 리스트 형식으로 뿌려줌
 						MemberDto member = (MemberDto)session.getAttribute("member");
 						MemberDao memberdao = new MemberDao();
 						ReviewDto reviewDto;

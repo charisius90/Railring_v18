@@ -20,6 +20,7 @@ public class ReviewPostCommand implements Command{
       MemberDto member = (MemberDto)session.getAttribute("member");
       String url = "WEB-INF/views/reviewPage/reviewPostPage.jsp";
       
+      // 규채 : 로그인 세션값이 다르면 로그인페이지로 이동
       if(member == null){
     	  req.setAttribute("error", "guest");
          url = "/WEB-INF/views/memberPage/memberLoginPage.jsp";

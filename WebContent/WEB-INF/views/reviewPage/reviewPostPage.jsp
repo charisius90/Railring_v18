@@ -135,7 +135,7 @@ textarea {
 										oEditors.getById["ir1"].exec("UPDATE_CONTENTS_FIELD", []); // 에디터의 내용이 textarea에 적용됩니다.
 
 										// 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("ir1").value를 이용해서 처리하면 됩니다.
-										
+										// 규채 : 등록을 눌렀을 때, 제목과 내용이 비어있으면 알람창을 띄움
 										var title = document.getElementById("subject").value;
 										var content = document.getElementById("ir1").value;
 										

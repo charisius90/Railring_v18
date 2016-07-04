@@ -1118,6 +1118,7 @@ function panTo(lat, lng) {
 //**************************현재위치**************************
 //추가 현재위치보기 클릭시 지도상에 자신의 위치가 표시가 됩니다.
 //HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
+// 규채 : 버튼을 누르면 현재 위치가 지도에 마커로 표시됨
 function myPlace() {
 	 if (navigator.geolocation) {
 	  

@@ -100,6 +100,7 @@ div.container{width:1200px}
 								<a href="review.action?cmd=READ&review_no=<%=reviewDto.getRev_no()%>">
 									<%=reviewDto.getRev_subject()%>
 									<%
+										  // 규채 : 새로 작성한 글을 1분동안 new 아이콘을 띄워줌
 			                              SimpleDateFormat t = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 			                              Date resdate = t.parse(reviewDto.getRev_date());
 			                              

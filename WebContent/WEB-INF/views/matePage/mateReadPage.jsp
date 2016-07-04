@@ -246,6 +246,7 @@ p img{width:auto; height:auto; max-height: 600px; max-width: 600px;}
 				<div style="float: right">
 					<a href="mate.action?cmd=MATE" class="btn btn-mini"><i class="icon-th-list"></i>목록</a>
 					<%
+						// 규채 : 로그인 세션 값이 읽는 글과 다를 경우 수정, 삭제 버튼이 안보임
 						if(member != null){
 							if(dto.getMem_no().equals(member.getMem_no())){
 					%>

@@ -15,6 +15,7 @@ public class ReviewReadCommand implements Command {
 			throws ServletException, IOException {
 		ReviewDao dao = new ReviewDao();
 		
+		// 규채 : 조회수 증가
 		req.setAttribute("review", dao.getReview(Integer.parseInt(req.getParameter("review_no")), true));
 		return "/WEB-INF/views/reviewPage/reviewReadPage.jsp";
 	}

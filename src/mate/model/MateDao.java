@@ -63,6 +63,7 @@ public class MateDao {
 		}
 	}
 
+	// 규채 : 게시글 조회수 증가
 	public MateDto getMate(int num, boolean isRead) {
 		System.out.println("이제 열 글 번호: " + num);
 		String sql = "select mat.*, mem.mem_name from  mate mat, member mem where mat.mem_no = mem.mem_no and mat.mat_no =" + num;
@@ -233,7 +234,7 @@ public class MateDao {
 		return vList;
 	}
 	
-	// 6월21일 추가 자기가 쓴 가져오기
+	// 규채 : 마이페이지에서 게시판에 자신이 쓴 글 가져오기
 		public ArrayList getMate(String mem_no){
 			String sql = "select * from mate where mem_no = ? ";
 			

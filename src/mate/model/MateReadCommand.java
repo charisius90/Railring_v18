@@ -16,6 +16,7 @@ public class MateReadCommand implements Command {
 		System.out.println("리드커맨드옴");
 		MateDao dao = new MateDao();
 		
+		// 규채 : 조회수 증가
 		req.setAttribute("mate", dao.getMate(Integer.parseInt(req.getParameter("mate_no")), true));
 		System.out.println("이제 리드jsp로");
 		return "/WEB-INF/views/matePage/mateReadPage.jsp";
