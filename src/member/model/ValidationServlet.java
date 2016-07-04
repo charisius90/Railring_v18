@@ -12,6 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import member.model.MemberDao;
 
+/**
+ * 
+ * @author ¼Ò¿µ
+ *
+ */
 public class ValidationServlet extends HttpServlet{
 	
 	public boolean isValidPw(String pw){
