@@ -14,7 +14,7 @@
 	var flag2 = false;
 
 	$(document).ready(function(){
-	    $('#inputEmail').keyup(function(){
+	    $('#inputEmail').keyup(function(){	// 입력한 이메일 형식을 ajax를 사용하여 실시간으로 확인하여 메시지 띄워줌. by 소영
 	        if ( $('#inputEmail').val().length > 0) {
 	            var email = $(this).val();
 	            $.ajax({
@@ -43,7 +43,7 @@
 	        }
 	    });
 	    
-	    $('#inputPassword').keyup(function(){
+	    $('#inputPassword').keyup(function(){	// 입력한 패스워드 형식을 ajax를 사용하여 실시간으로 확인하여 메시지 띄워줌.
 	        if ( $('#inputPassword').val().length > 0) {
 	            var pw = $(this).val();
 	            $.ajax({
@@ -68,7 +68,7 @@
 	        }
 	    });
 	    
-	    $('#inputName').keyup(function(){
+	    $('#inputName').keyup(function(){	// 입력한 이름 형식을 ajax를 사용하여 실시간으로 확인하여 메시지 띄워줌.
 	        if ( $('#inputName').val().length > 0) {
 	            var name = $(this).val();
 	            $.ajax({
@@ -93,7 +93,7 @@
 	        }
 	    });
 	    
-	    $("#register_btn").click(function(){
+	    $("#register_btn").click(function(){	// 가입하기 버튼을 클릭했을 때 비어있는 값 확인하여 메시지 띄워줌. by 소영
 	        if(!$('#inputName').val()){
 	        	$('#inputCheck').html('이름을 입력해 주세요.');
 	        	$('#inputName').focus();

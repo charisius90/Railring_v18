@@ -39,15 +39,16 @@ public class ValidationServlet extends HttpServlet{
 		PrintWriter out = resp.getWriter();
 		String result = "";
 		
+		// 이메일 형식 확인. by 소영
 		if(cmd.equals("email")){
 			String email = req.getParameter("email");
 			System.out.println(email);
-			
-			boolean flag = dao.isMember(email);
-			
-			Pattern p = Pattern.compile("(^[_a-z0-9-]+(.[_a-z0-9-]+)*@(?:\\w+\\.)+\\w+$)");
+			// 입력한 이메일에 해당하는 회원이 있는지 확인
+			boolean flag = dao.isMember(email);	
+			// 이메일 정규표현식에 알맞은 형식인지 확인
+			Pattern p = Pattern.compile("(^[_a-z0-9-]+(.[_a-z0-9-]+)*@(?:\\w+\\.)+\\w+$)");	
 			Matcher m = p.matcher(email); 
-			boolean test = m.find();
+			boolean test = m.find();	
 			
 			if(test==true){
 				if(flag==true){

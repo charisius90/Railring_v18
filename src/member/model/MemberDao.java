@@ -40,7 +40,7 @@ public class MemberDao {
 		return result;
 	}
 	
-	public String getMemberNo(String email){
+	public String getMemberNo(String email){	// 이메일 주소로 회원번호 가져오기. by 소영
 		try{
 			String sql = "select mem_no from member where mem_email like '" + email + "'";
 			con = pool.getConnection();
