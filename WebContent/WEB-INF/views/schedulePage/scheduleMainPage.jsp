@@ -495,7 +495,7 @@ function myFunction(cityNo){
 	window.open(url, "세부일정", "width=1000, height=750, toolbar=no, menubar=no, scrollbars=no, resizable=no");
 }
 //***************** 2016-06-17 추가 부분 시작**********************
-//polyline 관련 변수
+//polyline 관련 변수 by 소영
 var poly = new daum.maps.Polyline({
 	endArrow:true,
 	strokeWeight: 2, // 선의 두께 입니다
@@ -546,7 +546,7 @@ Train.prototype = {
 	getFlag: function(){return this.flag;}
 }
 
-// 마커 등록 함수 by 수항
+// 마커 등록 함수 by 수항, 소영
 function fnPlanMarkers(marker){
 	var $sortable = $("#sortable");
 	var param = '"' + marker.getTitle() + '"';
@@ -751,7 +751,7 @@ function fnGetIndex(title){
 	}
 }
 
-//순서 업데이트 함수 by 수항
+//순서 업데이트 함수 by 수항, 소영
 function fnUpdateQueue(array){
 	var size = array.length;
 	var $sort_li = $("#sortable li");
@@ -784,7 +784,7 @@ function fnUpdateQueue(array){
 	fnSetMarkerImage(array);
 }
 
-//제거 함수 by 수항
+//제거 함수 by 수항, 소영
 function fnDelMarker(title){
 	var index = fnGetIndex(title);
 	
@@ -796,7 +796,7 @@ function fnDelMarker(title){
 	fnSetPoly();
 }
 
-//polyline 세팅 함수
+//polyline 세팅 함수 by 소영
 function fnSetPoly(){
 	var size = marker_arr.length;
 	var resultPaths = [];
@@ -809,7 +809,7 @@ function fnSetPoly(){
 	poly.setMap(map);
 }
 	
-//마커 번호 이미지 저장
+//마커 번호 이미지 저장 by 소영
 function fnSetMarkerImage(marker_arr){
 	var size = marker_arr.length;
 	for(var i=0; i<size; i++){
@@ -872,7 +872,7 @@ var last_infowindow2 = null,	// 마지막에 열었던 인포윈도우2
     		    removable : iwRemovable
     		});
     		
-    		// 마커에 클릭이벤트를 등록합니다
+    		// 마커에 클릭이벤트를 등록합니다 by 소영
     		daum.maps.event.addListener(marker, 'click', function() {
        			// 닫지 않은 인포윈도우가 있을 경우 닫아줌
        			if(last_infowindow2!=null){	
@@ -894,7 +894,7 @@ var last_infowindow2 = null,	// 마지막에 열었던 인포윈도우2
        				}
        			}
        			
-       			// 등록이 안됐을 경우
+       			// 등록이 안됐을 경우 by 소영
        			if(!marker_tot[1][idx]){
        			   	// 마커 위에 인포윈도우를 표시합니다
        				infowindow3.open(map, marker);
@@ -1174,7 +1174,7 @@ function displayMarker(locPosition, messageLoc) {
 	});
 }    
 
-// 사용자가 sortable li 순서 변환 시 관련 모든 배열 업데이트  by 수항
+// 사용자가 sortable li 순서 변환 시 관련 모든 배열 업데이트  by 수항, 소영
 $(function() {
 	$( "#sortable" ).sortable({
 		stop: function( event, ui ) {
