@@ -445,7 +445,7 @@ $.getJSON("json/city.json",function (data){
 	// 지도를 생성합니다    
 	map = new daum.maps.Map(mapContainer, mapOption);
 
-	//관광명소
+	//승한 : jsonData 관광명소 리스트 출력
 	$.getJSON("json/" + cityTitle + "_Loc2.json", function(data) {
 		$(data.locations).each(function(i, location) {
 			//리스트출력시 html태그
@@ -469,7 +469,7 @@ $.getJSON("json/city.json",function (data){
 
 			$('#placesList').append(itemStr);
 		});
-		//시작시 마커
+		//승한:Json data위치로 시작시 마커 출력
 		$(data.locations).map(function(i, location) {
 			var marker = new daum.maps.Marker({
 				map : map,
@@ -492,7 +492,7 @@ $.getJSON("json/city.json",function (data){
 			
 			fnAddEvent(marker_tot[0]);
 		});
-		//관광지 탭 클릭이벤트
+		//승한 : jquery사용 관광지 탭 클릭이벤트
 		$("#loc").click(function() {
 			insertMarker(markerLoc);
 			removeMarker(markerHot);
@@ -503,7 +503,7 @@ $.getJSON("json/city.json",function (data){
 		});
 	});
 	
-	//숙박업소
+	//승한:Json data위치로 숙박업소 리스트출력
 	$.getJSON("json/" + cityTitle + "_Hot2.json", function(data) {
 		//placesList의 childnode 삭제
 		$(data.motels).each(function(i, motel) {
@@ -518,7 +518,7 @@ $.getJSON("json/city.json",function (data){
 
 			$('#placesList2').append(itemStr2);
 		});
-		
+		//승한 : 숙박업소 마커변경이벤트
 		$(data.motels).map(function(i, motel) {
 			var marker = new daum.maps.Marker({
 				map : map,
@@ -534,7 +534,7 @@ $.getJSON("json/city.json",function (data){
 			console.log(marker_tot[0].length);
 			fnAddEvent(marker_tot[0]);
 		});
-		//숙박업소 탭 클릭이벤트        
+		//승한 : 숙박업소 탭 클릭이벤트        
 		$("#hot").click(function() {
 			insertMarker(markerHot);
 			removeMarker(markerLoc);
@@ -545,7 +545,7 @@ $.getJSON("json/city.json",function (data){
 		});
 	});
 
-	//맛집
+	//승한:Json data위도경도로 맛집리스트출력
 	$.getJSON("json/" + cityTitle + "_Res2.json", function(data) {
 		//placesList의 childnode 삭제
 		$(data.restaurant).each(function(i, res) {
@@ -560,7 +560,7 @@ $.getJSON("json/city.json",function (data){
 			$('#placesList3').append(itemStr3);
 		});
 
-		
+		//승한 : 맛집마커 변경
 		$(data.restaurant).map(function(i, res) {
 			var marker = new daum.maps.Marker({
 				map : map,
@@ -577,7 +577,7 @@ $.getJSON("json/city.json",function (data){
 			fnAddEvent(marker_tot[0]);
 		});
 
-		//맛집 탭 클릭이벤트
+		//승한 :맛집 탭 클릭이벤트
 		$("#res").click(function() {
 			insertMarker(markerRes);
 			removeMarker(markerHot);
@@ -586,7 +586,7 @@ $.getJSON("json/city.json",function (data){
 			
 			fnCloseLastIw();
 		});
-		//마우스 온오버 css변경
+		//승한 :리스트 마우스 온오버 css변경
 		$(".media").mouseover(function(){
 // 			alert("a");
 			$(this).css("background-color","#f2f2f2");
@@ -597,7 +597,7 @@ $.getJSON("json/city.json",function (data){
 	});
 });
 
-//리스트클릭시 상세정보 모달
+//승한 : 리스트클릭시 상세정보 모달
 function listClickEvent(loc,lat){
 	$.getJSON("json/"+cityTitle+"_Res2.json", function(data) {
 		$(data.restaurant).each(function(i, res) {
@@ -649,7 +649,7 @@ function listClickEvent(loc,lat){
 	});
 	$("#myModal").modal('show');
 }
-
+//승한 : 리스트클릭시 위치 정중앙으로 재배치
 function listClickEvent2(lng,lat){
 	map.setCenter(new daum.maps.LatLng(lat,lng));
 }
@@ -664,7 +664,7 @@ function fnAddEvent(markers){
 		var iwContent = '<div style="padding:5px;">'+marker.getTitle()+'</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
 		//등록 안되어 있을떄scheduleDetail.action?cmd=DETAIL
 		var iwContent2 = '<div style="padding:5px;"><a href="#" style="text-align: center;">'+marker.getTitle()+' 등록됨</a></div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-		//등록 되어 있을때
+		//승한 : 등록 되어 있을때 listClickEvent호출 함수작성
 		var iwContent3 = '<div style="padding:5px;text-align:center;">'
 						+'<a href="#" id="register">'+marker.getTitle()+'등록하기 </a>'
 						+'<a href="#" onclick="listClickEvent('+marker.getPosition().getLng()+','+marker.getPosition().getLat()+')"><i class="icon-info-sign"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;'

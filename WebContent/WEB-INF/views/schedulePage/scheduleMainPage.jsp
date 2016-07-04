@@ -203,6 +203,7 @@ var sch_no = "";
 	}
 	
 	// 시간표 불러오기
+	// 승한 : 세부일정 상세정보 모달
 	function loadTimeTable(){
 		   var $timeTable = $("#timeTable");
 		   var params={
@@ -935,7 +936,7 @@ var last_infowindow2 = null,	// 마지막에 열었던 인포윈도우2
        			var title = position.title;
        			var city="'"+position.title+"'";
 //        			if(title == "Busan" || title == "Jeonju" || title == "Yeosu"){
-    	         //해당지역마커 클릭시
+    	         //승한 : 해당지역마커 클릭시 지역상세정보 리스트 출력
     	          $.getJSON("json/"+position.title+"_Loc2.json",function(data){
 				//alert(data.locations.length);
     	                 //placesList의 childnode 삭제
@@ -1026,7 +1027,7 @@ daum.maps.event.addListener(map, 'click', function(mouseEvent) {
 	console.log(message);
 });
 
-//리스트클릭시 상세정보 모달
+//승한 : 리스트클릭시 상세정보 모달
 	function listClickEvent(title,citytitle){
 		$.getJSON("json/"+citytitle+"_Res2.json", function(data) {
 			$(data.restaurant).each(function(i, res) {

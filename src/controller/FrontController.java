@@ -17,6 +17,7 @@ public class FrontController extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//승한 프론트 컨트롤러에서 각 컨트롤러로 연결 
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
 		
