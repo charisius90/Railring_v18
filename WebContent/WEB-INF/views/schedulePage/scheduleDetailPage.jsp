@@ -4,8 +4,8 @@
 <head>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <title>Scheduling Page</title>
-<link rel="stylesheet" href="http://192.168.20.112:8080/Railring_v18/bootstrap/css/bootstrap.min.css" />
-<script src="http://192.168.20.112:8080/Railring_v18/bootstrap/js/jquery-2.2.3.min.js"></script>
+<link rel="stylesheet" href="http://localhost:8080/Railring_v18/bootstrap/css/bootstrap.min.css" />
+<script src="http://localhost:8080/Railring_v18/bootstrap/js/jquery-2.2.3.min.js"></script>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -401,7 +401,7 @@ function fnSetPoly(){
 function fnSetMarkerImage(marker_arr){
 	var size = marker_arr.length;
 	for(var i=0; i<size; i++){
-		var imageSrc = 'http://192.168.20.112:8080/Railring_v18/images/marker_number_pink.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
+		var imageSrc = 'http://localhost:8080/Railring_v18/images/marker_number_pink.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
 			imageSize = new daum.maps.Size(36, 37),  // 마커 이미지의 크기
 			imgOptions =  {
 				spriteSize : new daum.maps.Size(36, 691), // 스프라이트 이미지의 크기
@@ -786,6 +786,6 @@ $(function() {
 	$("#sortable").disableSelection();
 });
 </script>
-<script   src="http://192.168.20.112:8080/Railring_v18/bootstrap/js/bootstrap.min.js"></script>
+<script   src="http://localhost:8080/Railring_v18/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

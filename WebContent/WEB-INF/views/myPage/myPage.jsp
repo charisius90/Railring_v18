@@ -9,8 +9,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="http://192.168.20.112:8080/Railring_v18/bootstrap/css/bootstrap.min.css" />
-<script src="http://192.168.20.112:8080/Railring_v18/bootstrap/js/jquery-2.2.3.min.js"></script>
+<link rel="stylesheet" href="http://localhost:8080/Railring_v18/bootstrap/css/bootstrap.min.css" />
+<script src="http://localhost:8080/Railring_v18/bootstrap/js/jquery-2.2.3.min.js"></script>
 <title>My Page</title>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -221,14 +221,14 @@ div.container{width:1200px}
 </div>
 
 <div class="container">
-	<div class="row" id="myBackImgDiv" style="padding-left:5px; height:400px; background-image:url('http://192.168.20.112:8080/Railring_v18/upload/${member.mem_background}'); background-repeat:no-repeat; background-position:0 20px; background-size:cover;">
+	<div class="row" id="myBackImgDiv" style="padding-left:5px; height:400px; background-image:url('http://localhost:8080/Railring_v18/upload/${member.mem_background}'); background-repeat:no-repeat; background-position:0 20px; background-size:cover;">
 		<div id="changeBackImg" style="width:125px; height:20px; margin-top:50px;">
 			<span id="backImgSpan" style="background-color:#bbbbbb; overflow:hidden; border:gray 1px solid; cursor:pointer; cursor:hand;"><i class="icon-user icon-camera"></i>배경 이미지 변경</span>
 		</div>
 		<div id="divider" style="background-color:none; height:150px"></div>
 		<div id="myImgDiv" align="left" style="border:gray 1px solid; background-color:white; width:168px; height:168px; padding:2px; overflow:hidden;">
 			<span id="myImgSpan" style="cursor:pointer; cursor:hand;">
-				<img id="myImg" src="http://192.168.20.112:8080/Railring_v18/upload/${member.mem_image}" alt="프로필 사진 등록"/>
+				<img id="myImg" src="http://localhost:8080/Railring_v18/upload/${member.mem_image}" alt="프로필 사진 등록"/>
 			</span>
 		</div>
 	</div>
@@ -501,6 +501,6 @@ div.container{width:1200px}
 		</div>
 	</div>
 </div>
-<script src="http://192.168.20.112:8080/Railring_v18/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://localhost:8080/Railring_v18/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

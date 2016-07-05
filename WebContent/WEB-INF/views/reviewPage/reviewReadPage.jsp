@@ -9,8 +9,8 @@
 <html>
 <head>
 <title>후기 게시판 읽기 화면</title>
-<link rel="stylesheet" href="http://192.168.20.112:8080/Railring_v18/bootstrap/css/bootstrap.min.css" />
-<script src="http://192.168.20.112:8080/Railring_v18/bootstrap/js/jquery-2.2.3.min.js"></script>
+<link rel="stylesheet" href="http://localhost:8080/Railring_v18/bootstrap/css/bootstrap.min.css" />
+<script src="http://localhost:8080/Railring_v18/bootstrap/js/jquery-2.2.3.min.js"></script>
 <script type="text/javascript">
 	<%
 		ReviewDto dto = (ReviewDto)request.getAttribute("review");
@@ -256,5 +256,5 @@ p img{width:auto; height:auto; max-height: 600px; max-width: 600px;}
 	</div>
 	<jsp:include page="../../../footer.jsp"></jsp:include>
 </body>
-<script src="http://192.168.20.112:8080/Railring_v18/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://localhost:8080/Railring_v18/bootstrap/js/bootstrap.min.js"></script>
 </html>

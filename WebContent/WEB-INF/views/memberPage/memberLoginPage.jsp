@@ -7,15 +7,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="http://192.168.20.112:8080/Railring_v18/bootstrap/css/bootstrap.min.css" />
-<link rel="stylesheet" href="http://192.168.20.112:8080/Railring_v18/bootstrap/css/bootstrap-responsive.min.css" />
-<script src="http://192.168.20.112:8080/Railring_v18/bootstrap/js/jquery-2.2.3.min.js"></script>
+<link rel="stylesheet" href="http://localhost:8080/Railring_v18/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="http://localhost:8080/Railring_v18/bootstrap/css/bootstrap-responsive.min.css" />
+<script src="http://localhost:8080/Railring_v18/bootstrap/js/jquery-2.2.3.min.js"></script>
 <meta charset="UTF-8">
 <title>Log in</title>
 </head>
 <body>
 <jsp:include page="../../../bannerNavBar.jsp"></jsp:include>
-<div style="background:url('http://192.168.20.112:8080/Railring_v18/images/bs_1.jpg') no-repeat; background-size:cover; height:300px; margin-top: 21px"></div>
+<div style="background:url('http://localhost:8080/Railring_v18/images/bs_1.jpg') no-repeat; background-size:cover; height:300px; margin-top: 21px"></div>
 <div class="container">
 	<div class="row">
 		<div class="span6 offset2" style="margin-top: 5%;">
@@ -74,6 +74,6 @@
 		</div>
 	</div>
 </div>
-<script src="http://192.168.20.112:8080/Railring_v18/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://localhost:8080/Railring_v18/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

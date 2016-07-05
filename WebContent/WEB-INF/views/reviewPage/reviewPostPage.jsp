@@ -4,9 +4,9 @@
 <html>
 <head>
 <title>Insert title here</title>
-<link rel="stylesheet" href="http://192.168.20.112:8080/Railring_v18/bootstrap/css/bootstrap.min.css" />
-<script	src="http://192.168.20.112:8080/Railring_v18/bootstrap/js/jquery-2.2.3.min.js"></script>
-<script type="text/javascript" src="http://192.168.20.112:8080/Railring_v18/SmartEditor2.8.2/js/HuskyEZCreator.js" charset="utf-8"></script>
+<link rel="stylesheet" href="http://localhost:8080/Railring_v18/bootstrap/css/bootstrap.min.css" />
+<script	src="http://localhost:8080/Railring_v18/bootstrap/js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/Railring_v18/SmartEditor2.8.2/js/HuskyEZCreator.js" charset="utf-8"></script>
 <script>
 	function resize_Image(event) {
 		resize_X=event.x;
@@ -101,7 +101,7 @@ textarea {
 											.createInIFrame({
 												oAppRef : oEditors,
 												elPlaceHolder : "ir1",
-												sSkinURI : "http://192.168.20.112:8080/Railring_v18/SmartEditor2.8.2/SmartEditor2Skin.html",
+												sSkinURI : "http://localhost:8080/Railring_v18/SmartEditor2.8.2/SmartEditor2Skin.html",
 												htParams : {
 													bUseToolbar : true, // 툴바 사용 여부 (true:사용/ false:사용하지 않음)
 													bUseVerticalResizer : true, // 입력창 크기 조절바 사용 여부 (true:사용/ false:사용하지 않음)
@@ -185,5 +185,5 @@ textarea {
 	</div>
 	<jsp:include page="../../../footer.jsp"></jsp:include>
 </body>
-<script	src="http://192.168.20.112:8080/Railring_v18/bootstrap/js/bootstrap.min.js"></script>
+<script	src="http://localhost:8080/Railring_v18/bootstrap/js/bootstrap.min.js"></script>
 </html>
