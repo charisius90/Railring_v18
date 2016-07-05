@@ -18,8 +18,13 @@
 <style>
 div.container{width:1200px}
 </style>
+<!-- 
+	마이페이지
+	@author 수항
+ -->
 <script>
 	$(
+		// jQueryUI 데이트피커
 		function(){
 			$("#datepicker").datepicker(
 				{
@@ -34,6 +39,7 @@ div.container{width:1200px}
 		}		
 	);
 	
+	// 프로필 사진 등록용 함수
 	function addFile1(){
 		var formData = new FormData();
 		formData.append("file",$("#imgFile")[0].files[0]);
@@ -65,6 +71,7 @@ div.container{width:1200px}
 		return true;
 	}
 	
+	// 배경사진 등록용 함수
 	function addFile2(){
 		var formData = new FormData();
 		formData.append("file",$("#backImgFile")[0].files[0]);
@@ -96,6 +103,7 @@ div.container{width:1200px}
 		return true;
 	}
 	
+	// 파일 용량, 형식 체크 함수
 	function fnFileValidCheck(id){
 		var maxSize = 5 * 1024 * 1024;	// 최대 용량 5MB
 		var size = $(id)[0].files[0].size;
@@ -117,8 +125,10 @@ div.container{width:1200px}
 	}
 	var dialog;
 	
+	// 페이지 로딩 시 기본 세팅
 	$(document).ready(
 		function(){
+			// 프로필 사진 클릭시 이벤트 등록
 			$("#myImgSpan").click(
 				function(){
 					dialog = $("#myImgModal").dialog({
@@ -136,6 +146,7 @@ div.container{width:1200px}
 				}
 			);
 			
+			// 배경사진 등록 버튼 클릭 이벤트 등록
 			$("#backImgSpan").click(
 				function(){
 					dialog = $("#backImgModal").dialog({
@@ -153,6 +164,7 @@ div.container{width:1200px}
 				}
 			);
 			
+			// 이전 작업하던 tab을 active해주는 조작 : 비밀번호 변경 시 페이지가 새로고침되므로 새로고침시 서버에서 넘겨주는 히든 값 act 확인하여 값이 존재하면 active설정 
 			var act = $("#act").val();
 			if(act){
 				$("#menu1").removeClass("active");
@@ -162,6 +174,7 @@ div.container{width:1200px}
 				$("#check2").addClass("active");
 			}
 			
+			// 성별이 DB에 등록되어있는 경우 그 값으로 초기화
 			var gender = $("#gender").val();
 			if(gender == "female"){
 				$("#optionGender1").attr({checked:"checked"});
@@ -170,6 +183,7 @@ div.container{width:1200px}
 				$("#optionGender2").attr({checked:"checked"});
 			}
 			
+			// 이미지 비율 조정
 			var $img = $("#myImg");
 			var ratio = $img.height()/$img.width();
 			if(ratio > 1){

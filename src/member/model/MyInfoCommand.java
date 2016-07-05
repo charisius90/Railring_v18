@@ -9,6 +9,11 @@ import javax.servlet.http.HttpSession;
 
 import dbcp.Command;
 
+/**
+ * 회원정보 수정 커맨드
+ * @author 수항
+ *
+ */
 public class MyInfoCommand implements Command {
 
 	@Override
@@ -40,7 +45,6 @@ public class MyInfoCommand implements Command {
 				req.setAttribute("error", "업데이트 실패, 서비스 담당자에게 문의하세요.");
 			}
 			
-			//session.removeAttribute("member");
 			session.setAttribute("member", dto);
 		}
 		

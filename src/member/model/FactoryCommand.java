@@ -2,6 +2,11 @@ package member.model;
 
 import dbcp.Command;
 
+/**
+ * 
+ * @author ¼öÇ×
+ *
+ */
 public class FactoryCommand {
 	private FactoryCommand(){}
 	private static FactoryCommand instance = new FactoryCommand();

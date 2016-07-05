@@ -11,8 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import dbcp.Command;
 
+/**
+ * 비밀번호 변경 커맨드
+ * @author 수항
+ *
+ */
 public class MyPasswordCommand implements Command {
 	
+	/**
+	 * 정규표현식으로 비밀번호 보안도 확인(숫자-문자 or 숫자-특수문자 or 숫자-문자-특수문자로 8자-16자 가능)
+	 * @param pw
+	 * @return
+	 */
 	public boolean isValidPw(String pw){
 		Pattern p = Pattern.compile("([a-zA-Z0-9].*[!,@,#,$,%,^,&,*,?,_,~])|([!,@,#,$,%,^,&,*,?,_,~].*[a-zA-Z0-9])");
 		Matcher m = p.matcher(pw);
@@ -35,7 +45,6 @@ public class MyPasswordCommand implements Command {
 		
 		MemberDao dao = new MemberDao();
 		
-		//String url = "/WEB-INF/views/myPage/myPage.jsp";
 		boolean flag = true;
 		
 		if(!dao.isCollectPw(email, oldPw)){

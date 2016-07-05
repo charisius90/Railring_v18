@@ -9,6 +9,11 @@ import javax.servlet.http.HttpSession;
 
 import dbcp.Command;
 
+/**
+ * 회원가입 커맨드
+ * @author 수항
+ *
+ */
 public class RegisterCommand implements Command{
 	
 	@Override

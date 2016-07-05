@@ -1,7 +1,11 @@
 package member.model;
 
+/**
+ * 
+ * @author 수항
+ *
+ */
 public class MemberDto {
-	// 기본 셋
 	private String mem_no; 
 	private String mem_email; 
 	private String mem_pw;
@@ -11,11 +15,6 @@ public class MemberDto {
 	private String mem_date;
 	private String mem_image;
 	private String mem_background;
-	
-	// 추가 셋
-	//private String mem_tel;
-	//private String mem_zipcode;
-	//private String mem_addr;
 	
 	public String getMem_no() {
 		return mem_no;

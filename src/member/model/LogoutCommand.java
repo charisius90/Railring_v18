@@ -9,6 +9,11 @@ import javax.servlet.http.HttpSession;
 
 import dbcp.Command;
 
+/**
+ * 
+ * @author ¼öÇ×
+ *
+ */
 public class LogoutCommand implements Command {
 
 	@Override

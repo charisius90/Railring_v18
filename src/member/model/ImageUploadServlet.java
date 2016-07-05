@@ -25,9 +25,13 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import member.model.MemberDao;
 import member.model.MemberDto;
 
+/**
+ * 
+ * @author 수항
+ *
+ */
 public class ImageUploadServlet extends HttpServlet {
 	/**
-	 * by 수항
 	 * 프로필 이미지, 프로필 배경 이미지 업로드 클래스
 	 */
 	

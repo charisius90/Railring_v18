@@ -9,6 +9,11 @@ import javax.servlet.http.HttpSession;
 
 import dbcp.Command;
 
+/**
+ * 로그인 된 경우만 마이페이지로 이동해주는 커맨드
+ * @author 수항
+ *
+ */
 public class MyPageCommand implements Command {
 
 	@Override

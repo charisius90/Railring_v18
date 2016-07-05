@@ -6,6 +6,11 @@ import java.sql.ResultSet;
 
 import dbcp.DBConnectionMgr;
 
+/**
+ * 
+ * @author 수항
+ *
+ */
 public class MemberDao {
 	private DBConnectionMgr pool;
 	private Connection con;
@@ -16,6 +21,12 @@ public class MemberDao {
 		this.pool = DBConnectionMgr.getInstance();
 	}
 	
+	/**
+	 * 입력한 이메일과 비밀번호의 DB 일치여부 반환 by 수항
+	 * @param email
+	 * @param pw
+	 * @return
+	 */
 	public boolean isCollectPw(String email, String pw){
 		boolean result = false;
 		try {
@@ -40,7 +51,12 @@ public class MemberDao {
 		return result;
 	}
 	
-	public String getMemberNo(String email){	// 이메일 주소로 회원번호 가져오기. by 소영
+	/**
+	 * 이메일 주소로 회원번호 가져오기. by 소영
+	 * @param email
+	 * @return
+	 */
+	public String getMemberNo(String email){
 		try{
 			String sql = "select mem_no from member where mem_email like '" + email + "'";
 			con = pool.getConnection();
@@ -62,7 +78,11 @@ public class MemberDao {
 		return null;
 	}
 	
-	//추가 160607
+	/**
+	 * 이메일 주소로 회원 정보 가져오기  by 수항
+	 * @param mem_email
+	 * @return
+	 */
 	public MemberDto getMemberInfo(String mem_email){
 		MemberDto dto = null;
 		try{
@@ -110,6 +130,11 @@ public class MemberDao {
 		return null;
 	}
 	
+	/**
+	 * 입력된 이메일의 회원여부 반환  by 수항
+	 * @param email
+	 * @return
+	 */
 	public boolean isMember(String email){
 		boolean result = false;
 		try {
@@ -131,6 +156,11 @@ public class MemberDao {
 		return result;
 	}
 	
+	/**
+	 * 회원추가  by 수항
+	 * @param dto
+	 * @return
+	 */
 	public boolean insertMember(MemberDto dto){
 		boolean result = false;
 		try {
@@ -158,7 +188,11 @@ public class MemberDao {
 		return result;
 	}
 	
-	//수정 160607
+	/**
+	 * 회원 정보 수정  by 수항
+	 * @param dto
+	 * @return
+	 */
 	public boolean updateMember(MemberDto dto){
 		boolean result = false;
 		try {
@@ -186,7 +220,12 @@ public class MemberDao {
 		return result;
 	}
 	
-	//추가 160607
+	/**
+	 * 회원 비밀번호 변경
+	 * @param email
+	 * @param newPw
+	 * @return
+	 */
 	public boolean changePw(String email, String newPw){
 		boolean result = false;
 		try {
@@ -210,6 +249,7 @@ public class MemberDao {
 		return result;
 	}
 	
+	// 회원삭제 - 구현X
 	public void deleteMemeber(){
 		
 	}
