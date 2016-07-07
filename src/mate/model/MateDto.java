@@ -1,5 +1,6 @@
 package mate.model;
 
+//by 손승한, 강병현
 public class MateDto {
 
 	private String mat_no;

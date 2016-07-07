@@ -2,6 +2,7 @@ package matereply.model;
 
 import java.io.Serializable;
 
+//by 손승한, 강병현
 public class MateReplyDto implements Serializable {
 	private String mat_re_no;
 	private String mat_re_content;

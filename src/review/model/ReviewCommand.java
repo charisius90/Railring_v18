@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import dbcp.Command;
 import utils.Paging2;
 
+//by 손승한, 강병현
 public class ReviewCommand implements Command {
 
 	@Override

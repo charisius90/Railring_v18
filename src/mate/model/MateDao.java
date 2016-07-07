@@ -10,6 +10,7 @@ import java.util.Vector;
 import dbcp.DBConnectionMgr;
 import utils.Paging;
 
+//by 손승한, 강병현
 public class MateDao {
 
 	private Connection con;

@@ -1,5 +1,6 @@
 package schedule.model;
 
+//by ¹Ú¼öÇ×
 public class TrainDto {
 	private String arrSt = null;
 	private String depSt = null;

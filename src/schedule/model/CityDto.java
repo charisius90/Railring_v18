@@ -3,6 +3,7 @@ package schedule.model;
 import java.util.ArrayList;
 import java.util.List;
 
+//by °­º´Çö
 public class CityDto {
 	private String city_no;
 	private String city_title;

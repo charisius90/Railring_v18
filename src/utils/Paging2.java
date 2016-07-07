@@ -2,6 +2,7 @@ package utils;
 
 import java.util.List;
 
+//by °­º´Çö
 public class Paging2<P> {
 	private int currentPage = 1;
 	private int startPage = 1;

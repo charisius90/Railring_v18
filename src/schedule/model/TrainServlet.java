@@ -21,6 +21,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
+//by ¹Ú¼öÇ×
 public class TrainServlet extends HttpServlet {
 	
 	@Override

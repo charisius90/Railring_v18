@@ -9,6 +9,7 @@ import java.util.List;
 
 import dbcp.DBConnectionMgr;
 
+//by 강병현,박규채
 public class DetailDao {
 	private DBConnectionMgr pool;
 	private Connection con;

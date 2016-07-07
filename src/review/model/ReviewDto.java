@@ -1,5 +1,6 @@
 package review.model;
 
+//by 손승한, 강병현
 public class ReviewDto {
 
 	private String rev_no;

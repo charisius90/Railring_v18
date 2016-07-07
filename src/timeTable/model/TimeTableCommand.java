@@ -17,6 +17,7 @@ import member.model.MemberDto;
 import schedule.model.ScheduleDao;
 import utils.Paging;
 
+//by 강병현, 박규채
 public class TimeTableCommand implements Command {
 
 	@Override

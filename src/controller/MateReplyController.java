@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import dbcp.Command;
 import matereply.model.FactoryCommand;
 
-
+//by 손승한, 강병현
 public class MateReplyController extends HttpServlet{
 
 	@Override

@@ -13,6 +13,7 @@ import dbcp.Command;
 import member.model.MemberDto;
 import utils.Paging;
 
+//by 강병현,박규채
 public class DetailPostCommand implements Command {
 
 	@Override

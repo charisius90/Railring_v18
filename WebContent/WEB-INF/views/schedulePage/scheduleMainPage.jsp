@@ -1,6 +1,7 @@
 <%@ page import="java.util.List"%>
 <%@ page contentType="text/html; charset=utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!-- html by 김소영, 손승한 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,6 +42,7 @@
 <script>
 var sch_no = "";
 // 새로 만들기 : 이때 sch_no 정해짐
+// by 강병현
 	function newSchedule(){
 		 $.ajax({
 			   type : "POST",
@@ -60,6 +62,7 @@ var sch_no = "";
 
 
 // 스케줄저장
+// by 강병현
 	function addForm(){
 		 var formData = $("#scheduleForm").serialize();
 		 console.dir(formData);
@@ -84,6 +87,7 @@ var sch_no = "";
 	}
 	
 	// 스케쥴 리스트
+	// by 강병현
 	$(window).load(function(){
 		$.ajax({
 			   type : "POST",
@@ -109,6 +113,7 @@ var sch_no = "";
 	});
 	
 	// marker_tot에서  title이 같은 마커 리턴
+	// by 박수항
 	function getMarkerFromTot(title){
 		for(var i=0; i<marker_tot[0].length; i++){
 			if(marker_tot[0][i].getTitle() == title){
@@ -117,6 +122,7 @@ var sch_no = "";
 		}
 	}
 	// 스케쥴 리스트(클릭)
+	// by 강병현
 	function getScheduleList(){
 		$.ajax({
 			   type : "POST",
@@ -142,6 +148,7 @@ var sch_no = "";
 	}
 	
 	// 스케쥴 불러오기
+	// by 강병현, 박수항
 	function loadSchedule(){
 	   var $scheduleList = $("#scheduleList");
 	   var params={
@@ -204,6 +211,7 @@ var sch_no = "";
 	
 	// 시간표 불러오기
 	// 승한 : 세부일정 상세정보 모달
+	// by 강병현
 	function loadTimeTable(){
 		   var $timeTable = $("#timeTable");
 		   var params={
@@ -236,6 +244,7 @@ var sch_no = "";
 		}
 	
 	//스케쥴 삭제
+	// by 강병현
 	function deleteSchedule(){
 		alert("스케쥴 삭제");
 			 var params={
@@ -408,6 +417,7 @@ var sch_no = "";
    <jsp:include page="../../../footer.jsp"></jsp:include>
 <script src="http://localhost:8080/Railring_v18/bootstrap/js/jquery.timepicker.min.js"></script>
 <script>
+//by 강병현
 var i = 0;
 var dragging = false;
 
@@ -833,6 +843,7 @@ var last_infowindow2 = null,	// 마지막에 열었던 인포윈도우2
 
 // **************************전체 일정 : 도시 마커 뿌리기 **************************		
 //전체일정: json파일 가져온 후 해당 좌표에 마커 뿌리기
+//by 강병현, 박수항
 	$.getJSON("json/city.json",function (data){
 		$(data.positions).map(function(i, position) {
     		var marker = new daum.maps.Marker({
@@ -1081,6 +1092,7 @@ daum.maps.event.addListener(map, 'click', function(mouseEvent) {
 	}
 //**************************전체일정 : 도시 검색**************************
 //전체일정 : 도시 검색
+//by 강병현, 박규채
 function citySearch(){
 	var keyword = $("#city_search").val();
 	var markerSearch;
@@ -1107,6 +1119,7 @@ function citySearch(){
 }
 
 //전체일정: 중심좌표변경
+//by 강병현, 박규채
 function panTo(lat, lng) {
     // 이동할 위도 경도 위치를 생성합니다 
     var moveLatLon = new daum.maps.LatLng(lat, lng);

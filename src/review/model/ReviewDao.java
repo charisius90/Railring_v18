@@ -10,6 +10,7 @@ import java.util.Vector;
 import dbcp.DBConnectionMgr;
 import utils.Paging2;
 
+//by 손승한, 강병현
 public class ReviewDao {
 
 	private Connection con;

@@ -9,6 +9,7 @@ import java.util.Vector;
 
 import dbcp.DBConnectionMgr;
 
+//by 손승한, 강병현
 public class MateReplyDao {
 	private Connection con;
 	private PreparedStatement stmt;

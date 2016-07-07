@@ -16,6 +16,7 @@ import dbcp.Command;
 import member.model.MemberDto;
 import oracle.net.ns.SessionAtts;
 
+//by 손승한, 강병현
 public class ReviewReplyPostCommand implements Command {
 	
 	@Override

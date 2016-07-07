@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import dbcp.Command;
 import member.model.*;
 
+//by 손승한, 강병현
 public class MemberController extends HttpServlet{
 
 	@Override

@@ -7,6 +7,7 @@ import detail.model.DetailPostCommand;
 import matereply.model.MateReplyPostCommand;
 import timeTable.model.TimeTableCommand;
 
+//by °­º´Çö
 public class FactoryCommand {
 	private FactoryCommand() {}
 	private static FactoryCommand instance = new FactoryCommand();

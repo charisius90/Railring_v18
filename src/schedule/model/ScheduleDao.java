@@ -13,6 +13,7 @@ import dbcp.DBConnectionMgr;
 import mate.model.MateDto;
 import member.model.MemberDto;
 
+//by °­º´Çö
 public class ScheduleDao {
 	private DBConnectionMgr pool;
 	private Connection con;

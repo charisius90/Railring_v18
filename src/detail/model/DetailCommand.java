@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import dbcp.Command;
 import utils.Paging;
 
+//by 강병현,박규채
 public class DetailCommand implements Command {
 
 	@Override

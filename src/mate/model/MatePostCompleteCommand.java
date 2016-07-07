@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import dbcp.Command;
 import member.model.MemberDto;
 
+//by 손승한, 강병현
 public class MatePostCompleteCommand implements Command {
 
 	@Override

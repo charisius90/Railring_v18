@@ -8,6 +8,7 @@
 <script	src="http://localhost:8080/Railring_v18/bootstrap/js/jquery-2.2.3.min.js"></script>
 <script type="text/javascript" src="http://localhost:8080/Railring_v18/SmartEditor2.8.2/js/HuskyEZCreator.js" charset="utf-8"></script>
 <script>
+// by 강병현
 	function resize_Image(event) {
 		resize_X=event.x;
 		resize_Y=event.y;

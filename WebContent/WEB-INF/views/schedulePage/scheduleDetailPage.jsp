@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8"%>
+<!-- html by 손승한, 강병현 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,6 +30,7 @@
 #ghostbar{height:3px;width: 100%;background-color:#000;opacity:0.5;position:absolute;cursor: row-resize;z-index:999}
 </style>
 <script>
+// by 강병현
 	function addDetail(){
 		var formData = $("#scheduleForm").serialize();
 		 console.dir(formData);
@@ -53,6 +55,7 @@
 	}
 	
 	// marker_tot에서  title이 같은 마커 리턴
+	// by 강병현
 	function getMarkerFromTot(title){
 		for(var i=0; i<marker_tot[0].length; i++){
 			if(marker_tot[0][i].getTitle() == title){
@@ -61,6 +64,7 @@
 		}
 	}	
 	
+	// by 강병현
 	function loadDetail(){
 		   var params={
 				   "sch_no":sch_no,
@@ -207,6 +211,7 @@
     	</div>
   </div>
 <script>
+//by 강병현
 	var i = 0;
 	var dragging = false;
 

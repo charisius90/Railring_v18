@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import dbcp.Command;
 
+//by °­º´Çö
 public class ReviewReplyCommand implements Command {
 
 	@Override

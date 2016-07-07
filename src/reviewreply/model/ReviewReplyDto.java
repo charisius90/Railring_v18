@@ -2,6 +2,7 @@ package reviewreply.model;
 
 import java.io.Serializable;
 
+//by 손승한, 강병현
 public class ReviewReplyDto implements Serializable {
 	private String rev_re_no;
 	private String rev_re_content;

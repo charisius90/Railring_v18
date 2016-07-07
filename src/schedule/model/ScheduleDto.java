@@ -3,6 +3,7 @@ package schedule.model;
 import java.util.ArrayList;
 import java.util.List;
 
+//by °­º´Çö
 public class ScheduleDto {
 	private String schedule_no;
 	private String mem_no;

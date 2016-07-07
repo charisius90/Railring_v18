@@ -3,7 +3,7 @@ package detail.model;
 import java.util.ArrayList;
 import java.util.List;
 
-
+//by 강병현,박규채
 public class DetailDto {
 //	private String info_index;
 //	private String info_no;

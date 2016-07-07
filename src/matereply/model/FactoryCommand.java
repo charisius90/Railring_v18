@@ -2,6 +2,7 @@ package matereply.model;
 
 import dbcp.Command;
 
+//by 손승한, 강병현
 public class FactoryCommand {
 	private FactoryCommand() {}
 	private static FactoryCommand instance = new FactoryCommand();
